@@ -26,6 +26,7 @@ public abstract class Command extends BukkitCommand {
     private boolean onlyPlayer;
     @Setter
     private CommandTarget target;
+    private Player player;
 
     @Setter
     private String permission;
@@ -70,6 +71,9 @@ public abstract class Command extends BukkitCommand {
     public boolean execute(CommandSender sender, String label, String[] args) {
         try {
             this.sender = sender;
+            if (sender instanceof Player)
+                this.player = (Player) sender;
+
             if (permission != null && !sender.hasPermission(permission)) {
                 message(noPermissionMessage);
                 return true;
