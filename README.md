@@ -11,9 +11,7 @@
 )
 public class CommandTest extends Command {
 
-    public CommandTest(JavaPlugin javaPlugin) {
-        super(javaPlugin);
-
+    public CommandTest() {
         registerSubCommand(new ExampleSubCommand()); // register a subcommand in this command
     }
 
@@ -49,7 +47,7 @@ public class YourMainPlugin extends JavaPlugin {
 
     @Override
     public void onEnable() {
-        CommandManager.registerCommand(this, new CommandTest(this)); // It is not necessary to register with plugin.yml.
+        CommandManager.registerCommand(this, new CommandTest()); // It is not necessary to register with plugin.yml.
     }
 }
 ```
