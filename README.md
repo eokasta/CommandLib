@@ -4,7 +4,7 @@
 
 * Maven:
 
-```maven
+```xml
 
 <repositories>
     <repository>
