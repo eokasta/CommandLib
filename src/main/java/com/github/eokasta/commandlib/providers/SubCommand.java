@@ -5,6 +5,7 @@ import com.github.eokasta.commandlib.exceptions.CommandLibException;
 import lombok.Data;
 import org.bukkit.ChatColor;
 import org.bukkit.command.CommandSender;
+import org.bukkit.entity.Player;
 
 @Data
 public abstract class SubCommand {
@@ -17,6 +18,7 @@ public abstract class SubCommand {
     @Deprecated
     private boolean onlyPlayer;
     private CommandTarget target;
+    private Player player;
 
     private String noPermissionMessage = "&cYou don't have permission!";
 
@@ -39,6 +41,11 @@ public abstract class SubCommand {
 
     public void message(String string, Object... args) {
         message(format(string, args));
+    }
+
+    public void setCommand(Command command) {
+        this.command = command;
+        this.setPlayer(command.getPlayer());
     }
 
     public abstract void execute(CommandSender commandSender, String[] args) throws CommandLibException;

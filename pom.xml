@@ -6,7 +6,7 @@
 
     <groupId>com.github.eokasta</groupId>
     <artifactId>CommandLib</artifactId>
-    <version>3.0</version>
+    <version>3.1</version>
     <description>CommandLib for spigot plug-ins</description>
     <url>https://github.com/eokasta/CommandLib</url>
 
