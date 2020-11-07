@@ -85,7 +85,7 @@ public class YourMainPlugin extends JavaPlugin {
 
     @Override
     public void onEnable() {
-        CommandManager commandManager = new CommandManager(this /*  */);
+        CommandManager commandManager = new CommandManager(this /* Your JavaPlugin */);
         commandManager.registerCommand(new CommandTest()); // It is not necessary to register with plugin.yml.
     }
 }
