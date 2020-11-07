@@ -17,7 +17,6 @@
     <groupId>com.github.eokasta</groupId>
     <artifactId>CommandLib</artifactId>
     <version>3.1</version>
-    <scope>compile</scope>
 </dependency>
 
 ```
