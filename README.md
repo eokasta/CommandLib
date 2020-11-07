@@ -1,5 +1,44 @@
 # CommandLib
 
+## Repository:
+
+* Maven:
+
+```maven
+
+<repositories>
+    <repository>
+        <id>jitpack.io</id>
+        <url>https://jitpack.io</url>
+    </repository>
+</repositories>
+
+<dependency>
+    <groupId>com.github.eokasta</groupId>
+    <artifactId>CommandLib</artifactId>
+    <version>3.1</version>
+    <scope>compile</scope>
+</dependency>
+
+```
+
+* Gradle:
+
+```gradle
+allprojects {
+    repositories {
+        ...
+        maven { url 'https://jitpack.io' }
+    }
+}
+
+dependencies {
+    implementation 'com.github.eokasta:CommandLib:3.1'
+}
+```
+
+## How to use:
+
 * Create a new command:
 
 ```java
